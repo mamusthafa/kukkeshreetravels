@@ -521,10 +521,21 @@ textarea {
   gap: 32px;
 }
 
-.footer a,
-.footer p,
-.footer li {
-  color: rgba(255, 255, 255, 0.78);
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.footer-bottom a:hover {
+  color: var(--white);
 }
 
 .footer ul {
