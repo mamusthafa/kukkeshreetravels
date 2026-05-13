@@ -62,12 +62,21 @@ a {
 }
 
 .site-header {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 20;
   background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--line);
-  backdrop-filter: blur(12px);
+}
+
+.header-banner {
+  display: flex;
+  justify-content: center;
+  background: var(--white);
+}
+
+.header-banner img {
+  width: min(100%, 1419px);
+  height: auto;
 }
 
 .nav {
@@ -167,26 +176,18 @@ button {
 
 .hero {
   position: relative;
-  min-height: 620px;
+  min-height: auto;
   display: grid;
   align-items: center;
   color: var(--white);
-  background: linear-gradient(90deg, rgba(12, 18, 25, 0.88), rgba(12, 18, 25, 0.38)), url("kukke-shree-travels-hero.png") center / cover no-repeat;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 110px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--white));
+  background: var(--ink);
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
   width: min(720px, 100%);
-  padding: 86px 0 120px;
+  padding: 72px 0;
 }
 
 .eyebrow {
@@ -300,6 +301,10 @@ p {
   color: var(--muted);
 }
 
+.vehicle-heading {
+  align-items: start;
+}
+
 .section-dark .section-heading p,
 .section-dark .muted {
   color: rgba(255, 255, 255, 0.72);
@@ -341,6 +346,22 @@ p {
 .card p,
 .muted {
   color: var(--muted);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin: 16px 0;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.section-feature-image {
+  width: min(420px, 100%);
+  aspect-ratio: 4 / 3;
+  margin-top: 18px;
+  border-radius: 8px;
+  object-fit: cover;
 }
 
 .section-dark .card p {
@@ -427,6 +448,10 @@ p {
   box-shadow: var(--shadow);
 }
 
+.contact-panel h2 {
+  font-size: 34px;
+}
+
 .field {
   display: grid;
   gap: 8px;
@@ -452,6 +477,11 @@ select {
 textarea {
   min-height: 168px;
   resize: vertical;
+}
+
+.enquiry-message {
+  height: 340px;
+  line-height: 1.55;
 }
 
 .notice {
@@ -550,7 +580,7 @@ textarea {
   }
 
   .hero {
-    min-height: 590px;
+    min-height: auto;
   }
 
   .trust-grid,
@@ -581,12 +611,11 @@ textarea {
   }
 
   .hero {
-    min-height: 630px;
-    background-position: center right;
+    min-height: auto;
   }
 
   .hero-content {
-    padding: 58px 0 118px;
+    padding: 48px 0;
   }
 
   .hero p {
