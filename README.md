@@ -1,4 +1,4 @@
-# Kukke Shree Travels Website
+# Kukkeshree Travel Holidays Website
 
 Static HTML/CSS website for GitHub Pages.
 
